@@ -23,9 +23,11 @@ Follow these steps to get the project up and running on your local machine:
 ```bash
 git clone https://github.com/your-username/gas-utility-service.git
 cd gas-utility-service
+Run below commands on the terminal
 pip install django
 python manage.py migrate
 python manage.py createsuperuser (Create the username, email, & password)
 After that login using the created username and password.
 python manage.py runserver
+You will see the server is running on http://127.0.0.1:8000/
 
