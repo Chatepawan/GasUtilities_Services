@@ -12,8 +12,9 @@ class CustomLoginView(LoginView):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('users.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', views.homepage, name='home'),
     path('requests/', include('service_requests.urls')),
-    path('accounts/login/', CustomLoginView.as_view(), name='login'),
+     path('accounts/login/', LoginView.as_view(template_name='registration/login.html'), name='login'),
 ]
